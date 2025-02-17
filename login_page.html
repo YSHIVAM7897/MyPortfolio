@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes buttonHover {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes backgroundMove {
+      0% {
+        background-position: 0% 0%;
+      }
+      100% {
+        background-position: 100% 100%;
+      }
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #cdb4db, #ffafcc);
+      background-size: 200% 200%;
+      animation: backgroundMove 15s ease infinite;
+      color: #6f6f95;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      background-color: #ffc8dd;
+      padding: 3rem;
+      border-radius: 1.2rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      width: 400px;
+      animation: fadeIn 0.6s ease-out;
+      position: relative;
+      z-index: 2;
+    }
+
+    .nav {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #ff004f;
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .input_section input {
+      width: 100%;
+      padding: 0.8rem;
+      margin: 0.8rem 0;
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid #adadad;
+      outline: none;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .input_section input:focus {
+      border-bottom: 2px solid #ff004f;
+      box-shadow: 0 4px 8px rgba(255, 0, 79, 0.3);
+    }
+
+    .forget {
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .forget a {
+      color: #ff004f;
+      text-decoration: none;
+      font-size: 0.9rem;
+      animation: fadeIn 0.9s ease-out;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 0.3rem;
+      background-color: #e24d84;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      animation: fadeIn 1s ease-out;
+    }
+
+    button:hover {
+      background-color: #ff004f;
+      animation: buttonHover 0.3s ease-out;
+    }
+
+    a {
+      color: rgb(58, 53, 53);
+      text-decoration: none;
+    }
+
+    .signup-button {
+      position: absolute;
+      top: 2%;
+      width: 6rem;
+      margin-left: 85rem;
+      margin-top: 1.5rem;
+      border: 1px solid #ff004f;
+      border-radius: 0.3rem;
+      background-color: #e24d84;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      animation: fadeIn 0.7s ease-out;
+    }
+
+    .signup-button:hover {
+      background-color: #ff004f;
+      animation: buttonHover 0.3s ease-out;
+    }
+
+    /* Ring animation */
+    .ring {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      background: rgba(255, 0, 79, 0.2);
+      width: 100px;
+      height: 100px;
+      transform: scale(0);
+      transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+    }
+
+    .ring:nth-child(2) {
+      background: rgba(255, 0, 79, 0.15);
+      width: 150px;
+      height: 150px;
+      animation: ringPulse 2s infinite;
+    }
+
+    @keyframes ringPulse {
+      0% {
+        transform: scale(0);
+      }
+      50% {
+        transform: scale(1);
+        opacity: 0.5;
+      }
+      100% {
+        transform: scale(0);
+        opacity: 0;
+      }
+    }
+
+    /* Hide rings by default */
+    .hide {
+      display: none;
+    }
+  </style>
+
+</head>
+<body>
+  <button class="signup-button">Sign-up</button>
+  <div class="container">
+    <h1 class="nav"><b>Log-in</b></h1>
+    <form action="portfolio.html" method="get">
+      <div class="input_section">
+        <input type="email" class="email_box" placeholder="Enter your email" required><br>
+        <input type="password" class="pass_box" placeholder="Enter your password" required>
+      </div>
+      <div class="forget">
+        <a href="#">Forget password?</a>
+      </div>
+      <div class="submit">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Rings for cursor effect -->
+  <div class="ring hide" id="ring1"></div>
+  <div class="ring hide" id="ring2"></div>
+  <div class="ring hide" id="ring3"></div>
+
+  <script>
+    document.addEventListener('mousemove', (event) => {
+      const rings = document.querySelectorAll('.ring');
+      rings.forEach(ring => {
+        ring.style.left = `${event.pageX - ring.clientWidth / 2}px`;
+        ring.style.top = `${event.pageY - ring.clientHeight / 2}px`;
+        ring.classList.remove('hide');
+      });
+      setTimeout(() => {
+        rings.forEach(ring => ring.classList.add('hide'));
+      }, 300);
+    });
+  </script>
+</body>
+</html>
