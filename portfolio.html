@@ -1,339 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="Icons/profileUser.png">
-  <title>Shivam | Developer Portfolio</title>
-  <link rel="stylesheet" href="portfolio_style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=M+PLUS+Rounded+1c&display=swap"
-    rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Icons/s.png">
+    <title>Shivam | Developer Portfolio</title>
+    <link rel="stylesheet" href="portfolio_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=M+PLUS+Rounded+1c&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
 </head>
 
-<body class="body">
-  <script src="Home.js"></script>
+<body>
+    <header>
+        <nav class="bott">
+            <div class="left" id="main"><b>Shivam's Portfolio</b></div>
+            <div class="right">
+                <ul class="list">
+                    <li><a href="#about" class="aboutbtn"><img src="Icons/about.svg" style="height: 0.9rem;"> About</a>
+                    </li>
+                    <li class="blog"><a href="https://yshivam7897.github.io/MyPortfolio/portfolio.html"><img src="Icons/blog.png" style="height: 0.9rem;"> Blogs </a>
+                    </li>
+                    <li><a href="#services-id"><img src="Icons/serices.svg" style="height: 0.9rem;"> Services</a></li>
+                    <li><a href="#contact"><img src="Icons/contact.svg" style="height: 1rem;"> Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-  <!--------------------------------------------------- THIS SECTION IS FOR HEADER PART -------------------------------------------------->
-  <header>
-    <nav class="bott">
-      <div class="left" id="main"><b>Shivam's Portfolio</b></div>
-      <div class="right">
-        <ul class="list">
-          <li><a href="#about" class="aboutbtn"><img src="Icons/about.svg" style="height: 0.9rem;"> About</a></li>
-          <li><a href="blog.html"><img src="Icons/blog.png" style="height: 0.9rem;"> Blogs </a></li>
-          <li><a href="#services-id"><img src="Icons/serices.svg" style="height: 0.9rem;"> Services</a></li>
-          <li><a href="#contact"><img src="Icons/contact.svg" style="height: 1rem;"> Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <div class="firstsection">
-      <div class="leftsection">
-        Hi, My name is <span class="userName">Shivam Yadav</span>.<br>
-        and I am a passionate web Developer & Android Developer!
-      </div>
-      <div class="rightsection">
-        <img src="https://invedus.com/images/services/hire-python-developer.png" alt="Profile Image">
-      </div>
-    </div>
-
-    <!-- -----------------------------------------about section ------------------------------------------- -->
-
-    <section id="about" class="about">
-      <div class="rightabout">
-        <img src="Icons/profileUser.png" alt="Profile Image">
-      </div>
-      <div class="about-content">
-        <h1>About Me</h1>
-        <p>I am Shivam Yadav, a passionate and detail-oriented BCA student currently pursuing my degree at Galgotias
-          University. With a strong foundation in Java, I specialize in automation testing, manual testing, and app
-          testing using Appium, Katalon. My expertise lies in ensuring software quality through efficient testing
-          methodologies. Hailing from Mau, Uttar Pradesh, I am eager to apply my technical skills to real-world
-          projects, continuously learning and growing in the field of software testing and development. </p>
-        <br>
-        <div class="tab-title">
-          <p class="tab-link active-link" onclick="opentab('skills')">Skills</p>
-          <p class="tab-link" onclick="opentab('Education')">Education</p>
-          <p class="tab-link" onclick="opentab('Experience')">Experience</p>
+    <section id="home" class="intro">
+        <div class="intro-text">
+            <div class="text-1">Hi, My name is</div>
+            <h1>Shivam Yadav</h1>
+            <h3>and I am a passionate Web & Android Developer!</h3>
+            <a href="https://drive.google.com/file/d/1_D8o4X6iT7g-ZXufzlG-c0mV42diwb7S/view?usp=drive_link"
+                download="Resume_Shivam_Yadav.pdf" style="text-decoration: none;">
+                <button class="btn">Resume</button></a>
         </div>
-        <br>
-        <div class="tab-contains active-tab" id="skills">
-          <ul>
-            <li style="list-style: none; margin-bottom: 10px;"><span
-                style="font-size: 16px; color: #b54769;">UI/UX<br></span>Developing web/app interfaces<br></li>
-            <li style="list-style: none; margin-bottom: 10px;"><span style="font-size: 16px; color: #b54769;">Automation
-                & Manual testing<br></span>Testing web apps using Selenium python, java<br></li>
-            <li style="list-style: none; margin-bottom: 10px;"><span style="font-size: 16px; color: #b54769;">Android
-                Apps testing<br></span>Testing Android apps using Appium Katalon (java)<br></li>
-            <li style="list-style: none; margin-bottom: 10px;"><span style="font-size: 16px; color: #b54769;">Android
-                Developer<br></span>Developing Android applications<br></li>
-            <li style="list-style: none;"><span style="font-size: 16px; color: #b54769;">Java:<br></span> I develop
-              applications using Java with a focus on backend logic.</li>
-          </ul>
-        </div>
-
-        <div class="tab-contains" id="Education">
-          <ul>
-            <li style="list-style: none; margin-bottom: 10px;"><span
-                style="font-size: 14px; color: #b54769;">Matrix:<br></span>Ram Janam Inter College with 84.8%</li>
-            <li style="list-style: none; margin-bottom: 10px;"><span
-                style="font-size: 14px; color: #b54769;">Intermediate:<br></span>Ram Janam Inter College with 81.5%</li>
-            <li style="list-style: none; margin-bottom: 10px;"><span
-                style="font-size: 14px; color: #b54769;">BCA<br></span>Galgotias University</li>
-          </ul>
-        </div>
-
-        <div class="tab-contains" id="Experience">
-          <ul>
-            <li style="list-style: none; margin-bottom: 10px;"><span
-                style="font-size: 14px; color: #b54769;">Intern<br></span>Manual and Automation tester at Thoughtcoders
-            </li>
-            <li style="list-style: none; margin-bottom: 10px;"><span style="font-size: 14px; color: #b54769;">Android
-                Development<br></span>Developing Android applications</li>
-          </ul>
-        </div>
-      </div>
     </section>
 
-    <!-- ----------------------------------- Service section --------------------------------------------------- -->
 
-    <h1 id="services-id" class="sericesHeading">Our Services</h1>
-    <div class="services">
-      <div class="service">
-        <h2>Android Development</h2>
-        <p>Building robust and user-friendly Android applications.</p>
-      </div>
-      <div class="service">
-        <h2>App testing</h2>
-        <p>Ensure quality and performance with our expert app testing services.</p>
-      </div>
-      <div class="service">
-        <h2>Web apps testing </h2>
-        <p>We provide seamless and reliable testing for web applications.</p>
-      </div>
-    </div>
+    <section id="about">
+        <div class="container-about">
+            <div class="about">
+                <div class="rightabout">
+                    <img src="Icons/profileUser.jpg" alt="Profile Image">
+                </div>
+                <div class="about-text">
+                    <h1>About Me</h1>
+                    <p>I am Shivam Yadav, a passionate and detail-oriented BCA student currently pursuing my degree at
+                        Galgotias
+                        University. With a strong foundation in Java, I specialize in automation testing, manual
+                        testing, and
+                        app testing using Appium and Katalon. My expertise lies in ensuring software quality through
+                        efficient
+                        testing methodologies.</p>
 
-  </main>
+                    <!-- Tabs -->
+                    <div class="tab-title">
+                        <p class="tab-link active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-link" onclick="opentab('Education')">Education</p>
+                        <p class="tab-link" onclick="opentab('Experience')">Experience</p>
+                    </div>
 
-  <!-- ----------------------------- Footer part --------------------------------------------------->
+                    <div class="tab-contains active-tab" id="skills">
+                        <ul>
+                            <li><span class="bullets">UI/UX:</span><br> Developing web/app interfaces</li>
+                            <li><span class="bullets">Automation & Manual Testing:</span><br>Testing web apps using
+                                Selenium python, java </li>
+                            <li><span class="bullets">Android Apps Testing:</span><br>Testing Android apps using Appium
+                                katalon java </li>
+                            <li><span class="bullets">Android Developer:</span><br> Building Android applications</li>
+                            <li><span class="bullets">Java:</span><br>Backend development</li>
+                        </ul>
+                    </div>
 
-  <footer>
-    <div id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="contact-left">
-            <h1 class="sub-title" style="text-align: start;"><b>Contact Me</b></h1>
-            <p><a class="contactIcon" href="mailto:yadavshivam6925@gmail.com"><img src="Icons/mail.svg" class="I"
-                  style="height: 1.5rem;"></a> <a href="mailto:yadavshivam6925@gmail.com"
-                style="color: #ae9797; border: 0ch; background-color: transparent;">yadavshivam6925@gmail.com</a></p>
-            <p><a class="contactIcon" href="tel:+917897063398"><img src="Icons/contact.svg"
-                  style="height: 1.5rem;"></a><a href="tel:+917897063398"
-                style="color: #ae9797; border: 0ch; background-color: transparent;">7897-06-3398</a></p>
+                    <div class="tab-contains" id="Education">
+                        <ul>
+                            <li><span class="bullets"> Matriculation:</span><br> Ram Janam Inter College - 84.8%</li>
+                            <li><span class="bullets"> Intermediate:</span><br> Ram Janam Inter College - 81.5%</li>
+                            <li><span class="bullets"> BCA:</span><br>Galgotias University</li>
+                        </ul>
+                    </div>
 
-            <h1 class="sub-title" style="text-align: start; margin-top: 8.33vw;">Follow us </h1>
-            <div class="social-media">
-              <a class="btnSS" href="https://api.whatsapp.com/send?phone=7897063398"><img src="Icons\whatsapp.svg"
-                  style="height: 1.4rem;"></a>
-              <a class="btnSS" href="https://github.com/YSHIVAM7897"><img src="Icons/github.svg"
-                  style="height: 1.4rem;"></a>
-              <a class="btnSS" href="https://www.linkedin.com/in/shivamyadav7897/"><img src="Icons/linkedin (1).svg"
-                  style="height: 1.4rem;"></a>
-              <a class="btnSS" href="https://x.com/czy_sam_7897"><img src="Icons/twitter.svg"
-                  style="height: 1.4rem;"></a>
-              <a class="btnSS" href="https://www.instagram.com/haridashi_00?igsh=MWRrcGhsazA4NXFvYQ=="><img
-                  src="Icons/instagram.svg" style="height: 1.4rem;"></a>
+                    <div class="tab-contains" id="Experience">
+                        <ul>
+                            <li><span class="bullets"> Intern:</span><br>Manual and Automation Tester at Thoughtcoders
+                            </li>
+                            <li><span class="bullets">Android Development:</span><br>Developing Android applications
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-
-            <!-- <div>
-              <a href="C:\Users\Lenovo\Downloads\shivam yadav.pdf" download="Your_CV.pdf" class="btn btn2" style="font-size: .8rem; text-align: center; padding: 10px;">Download CV</a>
-            </div> -->
-          </div>
-
-          <div class="contact-right">
-            <form name="submit-to-google-sheet">
-              <input type="text" name="Name" placeholder="Enter your name" required>
-              <input type="email" name="Email" placeholder="Enter your email" required>
-              <textarea name="Message" cols="none" rows="6" placeholder="Enter your message"></textarea>
-              <button type="submit" class="btn btn2 btn3">Submit</button>
-            </form>
-
-          </div>
         </div>
-      </div>
-    </div>
+    </section>
 
-    <div class="copyright">
-      <p class="copyright-text" style="color: aliceblue;">All copyright reserved by Shivam's Portfolio!</p>
+    <section>
+        <h1 id="services-id" class="sericesHeading">Our Services</h1>
+        <div class="services">
+            <div class="card">
+                <img src="https://img.icons8.com/?size=160&id=114425&format=png" style="width: 140px;"
+                    class="fas fa-lightbulb"></i>
+                <h3>Android Development</h3>
+                <p>Building robust and user-friendly Android applications.</p>
+            </div>
+            <div class="card">
+                <img src="https://cdn-icons-png.freepik.com/256/1205/1205526.png?ga=GA1.1.1532826155.1727039448&semt=ais_hybrid"
+                    style="width: 120px;" class="fas fa-lightbulb"></i>
+                <h3>App testing</h3>
+                <p>Ensure quality and performance with our expert app testing services.</p>
+            </div>
+            <div class="card">
+                <img src="https://cdn-icons-png.freepik.com/256/9609/9609903.png?ga=GA1.1.1532826155.1727039448&semt=ais_hybrid"
+                    style="width: 120px;" class="fas fa-paint-brush"></i>
+                <h3>Web apps testing </h3>
+                <p>We provide seamless and reliable testing for web applications.</p>
+            </div>
+        </div>
+    </section>
 
-      <div class="policy-links">
-        <p class="open-popup-btn">
-          <a href="#" id="privacy-link">Privacy Policy</a>
-        </p>
-        <p class="separator"> | </p>
-        <p class="open-popup-btn">
-          <a href="#" id="terms-link">Terms and Conditions</a>
-        </p>
-      </div>
-    </div>
+    <section id="getInTouch" class="getInTouch">
+        <h1>Get in touch </h1>
+        <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Enter your name" required>
+            <input type="email" name="Email" placeholder="Enter your email" required>
+            <textarea name="Message" cols="none" rows="6" placeholder="Enter your message"></textarea>
+            <button type="submit" class="btn btn2 btn3">Submit</button>
+        </form>
+    </section>
 
+    <footer>
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title" style="text-align: start;"><b>Contact Me</b></h1>
+                        <p><a class="contactIcon" href="mailto:yadavshivam6925@gmail.com"><img src="Icons/mail.svg"
+                                    class="I" style="height: 1.5rem;"></a> <a href="mailto:yadavshivam6925@gmail.com"
+                                style="color: #161515; border: 0ch; background-color: transparent;">yadavshivam6925@gmail.com</a>
+                        </p>
+                        <p><a class="contactIcon" href="tel:+917897063398"><img src="Icons/contact.svg"
+                                    style="height: 1.5rem;"></a><a href="tel:+917897063398"
+                                style="color: #161515; border: 0ch; background-color: transparent;">7897-06-3398</a></p>
 
-    <div class="popup-bg" id="privacy-popup">
-      <div class="popup">
-        <button class="close-btn">&times;</button>
-        <h2>Privacy Policy</h2>
-        <p><strong>Last updated: [22/09/2024]</strong></p>
-        <p>
-          Welcome to Shivam's Portfolio. This Privacy Policy outlines how we handle your information when you visit our
-          website.
-        </p>
-        <ol>
-          <li><strong>Information Collection</strong><br>
-            We collect personal information only when you voluntarily provide it, such as when you:
-            <ul>
-              <li>Contact us via the form on the website</li>
-              <li>Subscribe to updates or newsletters (if applicable)</li>
-            </ul>
-            The personal information we collect may include your name, email address, and any message you provide in the
-            contact form.
-          </li>
+                        <h1 class="sub-title" style="text-align: start; margin-top: 8.33vw;">Follow us </h1>
+                        <div class="social-media">
+                            <a class="btnSS" href="https://api.whatsapp.com/send?phone=7897063398"><img
+                                    src="Icons\whatsapp.svg" style="height: 1.4rem;"></a>
+                            <a class="btnSS" href="https://github.com/YSHIVAM7897"><img src="Icons/github.svg"
+                                    style="height: 1.4rem;"></a>
+                            <a class="btnSS" href="https://www.linkedin.com/in/shivamyadav7897/"><img
+                                    src="Icons/linkedin (1).svg" style="height: 1.4rem;"></a>
+                            <a class="btnSS" href="https://x.com/czy_sam_7897"><img src="Icons/twitter.svg"
+                                    style="height: 1.4rem;"></a>
+                            <a class="btnSS"
+                                href="https://www.instagram.com/haridashi_00?igsh=MWRrcGhsazA4NXFvYQ=="><img
+                                    src="Icons/instagram.svg" style="height: 1.4rem;"></a>
+                        </div>
 
-          <li><strong>How We Use Your Information</strong><br>
-            The information collected is used solely to respond to your queries or provide updates. We do not sell,
-            share, or misuse your personal information.
-          </li>
+                        <!-- <div>
+                  <a href="C:\Users\Lenovo\Downloads\shivam yadav.pdf" download="Your_CV.pdf" class="btn btn2" style="font-size: .8rem; text-align: center; padding: 10px;">Download CV</a>
+                </div> -->
+                    </div>
+                    <div class="contact-right">
+                        <h1 class="sub-title" style="text-align: start;"><b>Quick Links</b></h1> 
+                        </h1>
+                        <ul style="text-align: start;">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li> 
+                            <li><a href="https://yshivam7897.github.io/MyPortfolio/blog.html">Blog</a></li>
+                            <li><a href="#services-id">Services</a></li>
+                            <li><a href="#getInTouch">Contact</a></li>
+                        </ul>
 
-          <li><strong>Cookies and Analytics</strong><br>
-            Our website may use cookies to enhance your experience. Cookies are small text files stored on your device.
-            We can analyze site traffic using tools like Google Analytics (no personal data is stored here). You can
-            disable cookies through your browser settings.
-          </li>
+                        
+                      <h1 class="space" style="height: 13rem;"><b> </b></h1>
+                </div>
+                </div>
+            </div>
+        </div>
 
-          <li><strong>Security</strong><br>
-            We take reasonable measures to protect your personal information from unauthorized access or disclosure.
-            However, no method of internet transmission is 100% secure.
-          </li>
+        <div class="copyright">
+            <p class="copyright-text" style="color: aliceblue;">All copyright reserved by Shivam's Portfolio!</p>
+        </div>
 
-          <li><strong>Third-Party Links</strong><br>
-            Our website may include links to third-party websites, such as social media or project links. We are not
-            responsible for the content or privacy practices of these external sites.
-          </li>
+    </footer>
 
-          <li><strong>Your Rights</strong><br>
-            You have the right to request access to the personal information we hold about you and request corrections
-            or deletions to this information.
-          </li>
-
-          <li><strong>Changes to This Policy</strong><br>
-            We may update this Privacy Policy from time to time. Any changes will be posted on this page, and you are
-            advised to review it periodically.
-          </li>
-
-          <li><strong>Contact Us</strong><br>
-            If you have any questions or concerns regarding this Privacy Policy, please contact us at:
-            <br>Email: <a href="mailto:yadavshivam6925@gmail.com">yadavshivam6925@gmail.com</a>
-            <br>Phone: <a href="tel:+917897063398">+91-7897-06-3398</a>
-          </li>
-        </ol>
-      </div>
-    </div>
-
-    <div class="popup-bg" id="terms-popup">
-      <div class="popup">
-        <button class="close-btn">&times;</button>
-        <h2>Terms and Conditions</h2>
-        <p>These are the terms and conditions. You can add details here.</p>
-      </div>
-    </div>
-
-  </footer>
-  <script>
-
+</body> 
+<script>
     var tablinks = document.getElementsByClassName("tab-link");
     var tabcontents = document.getElementsByClassName("tab-contains");
 
     function opentab(tabname) {
-      // Remove active class from all tab links
-      for (var tablink of tablinks) {
-        tablink.classList.remove("active-link");
-      }
-
-      // Hide all tab contents
-      for (var tabcontent of tabcontents) {
-        tabcontent.classList.remove("active-tab");
-      }
-
-      // Add active class to the clicked tab link
-      event.currentTarget.classList.add("active-link");
-
-      // Show the clicked tab content
-      document.getElementById(tabname).classList.add("active-tab");
-    }
-
-    document.getElementById('privacy-link').addEventListener('click', function (event) {
-      event.preventDefault();
-      document.getElementById('privacy-popup').style.display = 'flex';
-    });
-
-    document.getElementById('terms-link').addEventListener('click', function (event) {
-      event.preventDefault();
-      document.getElementById('terms-popup').style.display = 'flex';
-    });
-
-    document.querySelectorAll('.close-btn').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        this.closest('.popup-bg').style.display = 'none';
-      });
-    });
-
-    document.querySelectorAll('.popup-bg').forEach(function (bg) {
-      bg.addEventListener('click', function (event) {
-        if (event.target === this) {
-          this.style.display = 'none';
+        // Remove active class from all tab links
+        for (var tablink of tablinks) {
+            tablink.classList.remove("active-link");
         }
-      });
-    });
 
-    function showPopup(id) {
-      document.getElementById(id).style.display = 'flex'; // Show the specific popup by id
+        // Hide all tab contents
+        for (var tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+
+        // Add active class to the clicked tab link
+        event.currentTarget.classList.add("active-link");
+
+        // Show the clicked tab content
+        document.getElementById(tabname).classList.add("active-tab");
     }
+</script>
 
-    // Function to hide the popup
-    function hidePopup(id) {
-      document.getElementById(id).style.display = 'none'; // Hide the specific popup by id
-    }
-
-    // Event listener for the close buttons
-    document.querySelectorAll('.close-btn').forEach(btn => {
-      btn.addEventListener('click', function () {
-        this.closest('.popup-bg').style.display = 'none'; // Hide the closest popup
-      });
-    });
-    // Google Sheets Form Submission
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwg7X6fxfSYjkYocKXekzS03zgxBrhGVlI8vA324ldj3gWrOQr0xZjviklP0cXmFUJvNA/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const submitBtn = form.querySelector("button[type='submit']");
-
-    submitBtn.disabled = false;
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      submitBtn.disabled = true;
-      submitBtn.innerText = "Sending...";
-      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => {
-          alert("Massage Sent successfully");
-          form.reset();
-        })
-        .catch(error => console.error('Error!', error.message))
-        .finally(() => {
-          submitBtn.disabled = false;
-          submitBtn.innerText = "Submit";
-        })
-    })
-  </script>
-</body>
 </html>
