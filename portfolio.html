@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="Icons/s.png">
-    <title>Shivam | Developer Portfolio</title>
+    <title>Shivam's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css">
     <link rel="stylesheet" href="portfolio_style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,207 +14,320 @@
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=M+PLUS+Rounded+1c&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
 </head>
 
 <body>
-    <header>
-        <nav class="bott">
-            <div class="left" id="main"><b>Shivam's Portfolio</b></div>
-            <div class="right">
-                <ul class="list">
-                    <li><a href="#about" class="aboutbtn"><img src="Icons/about.svg" style="height: 0.9rem;"> About</a>
-                    </li>
-                    <li class="blog"><a href="https://yshivam7897.github.io/MyPortfolio/portfolio.html"><img src="Icons/blog.png" style="height: 0.9rem;"> Blogs </a>
-                    </li>
-                    <li><a href="#services-id"><img src="Icons/serices.svg" style="height: 0.9rem;"> Services</a></li>
-                    <li><a href="#contact"><img src="Icons/contact.svg" style="height: 1rem;"> Contact</a></li>
-                </ul>
-            </div>
+    <!-- Header -->
+    <header class="header">
+        <h1 class="logo">Shivam's Portfolio</h1>
+        <nav class="nav">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="https://yshivam7897.github.io/MyPortfolio/blog.html">Blogs</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
     </header>
 
-    <section id="home" class="intro">
-        <div class="intro-text">
-            <div class="text-1">Hi, My name is</div>
-            <h1>Shivam Yadav</h1>
-            <h3>and I am a passionate Web & Android Developer!</h3>
-            <a href="https://drive.google.com/file/d/1_D8o4X6iT7g-ZXufzlG-c0mV42diwb7S/view?usp=drive_link"
-                download="Resume_Shivam_Yadav.pdf" style="text-decoration: none;">
-                <button class="btn">Resume</button></a>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <p class="hero-intro">Hi, My name is</p>
+            <h2 class="hero-name">Shivam Yadav</h2>
+            <p class="hero-tagline">and I am a passionate Web & Android Developer!</p>
+            <a href="https://drive.google.com/file/d/12LKvxdabJYtALo4uh7ncL_7LRGAR5af8/view?usp=drive_link">
+                <button class="btn btn-primary" type="submit" >Resume</button>
+            </a>
         </div>
     </section>
 
-
-    <section id="about">
-        <div class="container-about">
-            <div class="about">
-                <div class="rightabout">
-                    <img src="Icons/profileUser.jpg" alt="Profile Image">
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-container">
+                        <img src="Icons/profileUser.jpg" alt="Shivam Yadav">
+                    </div>
                 </div>
                 <div class="about-text">
-                    <h1>About Me</h1>
-                    <p>I am Shivam Yadav, a passionate and detail-oriented BCA student currently pursuing my degree at
-                        Galgotias
-                        University. With a strong foundation in Java, I specialize in automation testing, manual
-                        testing, and
-                        app testing using Appium and Katalon. My expertise lies in ensuring software quality through
-                        efficient
-                        testing methodologies.</p>
+                    <h2 class="section-title">About Me</h2>
+                    <p>
+                        I am Shivam Yadav, a passionate and detail-oriented BCA student currently pursuing my degree at
+                        Galgotias University. With a strong foundation in Java, I specialize in automation testing,
+                        manual testing, and app testing using Appium and Katalon. My expertise lies in ensuring software
+                        quality through efficient testing methodologies.
+                    </p>
 
-                    <!-- Tabs -->
-                    <div class="tab-title">
-                        <p class="tab-link active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-link" onclick="opentab('Education')">Education</p>
-                        <p class="tab-link" onclick="opentab('Experience')">Experience</p>
-                    </div>
-
-                    <div class="tab-contains active-tab" id="skills">
-                        <ul>
-                            <li><span class="bullets">UI/UX:</span><br> Developing web/app interfaces</li>
-                            <li><span class="bullets">Automation & Manual Testing:</span><br>Testing web apps using
-                                Selenium python, java </li>
-                            <li><span class="bullets">Android Apps Testing:</span><br>Testing Android apps using Appium
-                                katalon java </li>
-                            <li><span class="bullets">Android Developer:</span><br> Building Android applications</li>
-                            <li><span class="bullets">Java:</span><br>Backend development</li>
-                        </ul>
-                    </div>
-
-                    <div class="tab-contains" id="Education">
-                        <ul>
-                            <li><span class="bullets"> Matriculation:</span><br> Ram Janam Inter College - 84.8%</li>
-                            <li><span class="bullets"> Intermediate:</span><br> Ram Janam Inter College - 81.5%</li>
-                            <li><span class="bullets"> BCA:</span><br>Galgotias University</li>
-                        </ul>
-                    </div>
-
-                    <div class="tab-contains" id="Experience">
-                        <ul>
-                            <li><span class="bullets"> Intern:</span><br>Manual and Automation Tester at Thoughtcoders
-                            </li>
-                            <li><span class="bullets">Android Development:</span><br>Developing Android applications
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <h1 id="services-id" class="sericesHeading">Our Services</h1>
-        <div class="services">
-            <div class="card">
-                <img src="https://img.icons8.com/?size=160&id=114425&format=png" style="width: 140px;"
-                    class="fas fa-lightbulb"></i>
-                <h3>Android Development</h3>
-                <p>Building robust and user-friendly Android applications.</p>
-            </div>
-            <div class="card">
-                <img src="https://cdn-icons-png.freepik.com/256/1205/1205526.png?ga=GA1.1.1532826155.1727039448&semt=ais_hybrid"
-                    style="width: 120px;" class="fas fa-lightbulb"></i>
-                <h3>App testing</h3>
-                <p>Ensure quality and performance with our expert app testing services.</p>
-            </div>
-            <div class="card">
-                <img src="https://cdn-icons-png.freepik.com/256/9609/9609903.png?ga=GA1.1.1532826155.1727039448&semt=ais_hybrid"
-                    style="width: 120px;" class="fas fa-paint-brush"></i>
-                <h3>Web apps testing </h3>
-                <p>We provide seamless and reliable testing for web applications.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="getInTouch" class="getInTouch">
-        <h1>Get in touch </h1>
-        <form name="submit-to-google-sheet">
-            <input type="text" name="Name" placeholder="Enter your name" required>
-            <input type="email" name="Email" placeholder="Enter your email" required>
-            <textarea name="Message" cols="none" rows="6" placeholder="Enter your message"></textarea>
-            <button type="submit" class="btn btn2 btn3">Submit</button>
-        </form>
-    </section>
-
-    <footer>
-        <div id="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="contact-left">
-                        <h1 class="sub-title" style="text-align: start;"><b>Contact Me</b></h1>
-                        <p><a class="contactIcon" href="mailto:yadavshivam6925@gmail.com"><img src="Icons/mail.svg"
-                                    class="I" style="height: 1.5rem;"></a> <a href="mailto:yadavshivam6925@gmail.com"
-                                style="color: #161515; border: 0ch; background-color: transparent;">yadavshivam6925@gmail.com</a>
-                        </p>
-                        <p><a class="contactIcon" href="tel:+917897063398"><img src="Icons/contact.svg"
-                                    style="height: 1.5rem;"></a><a href="tel:+917897063398"
-                                style="color: #161515; border: 0ch; background-color: transparent;">7897-06-3398</a></p>
-
-                        <h1 class="sub-title" style="text-align: start; margin-top: 8.33vw;">Follow us </h1>
-                        <div class="social-media">
-                            <a class="btnSS" href="https://api.whatsapp.com/send?phone=7897063398"><img
-                                    src="Icons\whatsapp.svg" style="height: 1.4rem;"></a>
-                            <a class="btnSS" href="https://github.com/YSHIVAM7897"><img src="Icons/github.svg"
-                                    style="height: 1.4rem;"></a>
-                            <a class="btnSS" href="https://www.linkedin.com/in/shivamyadav7897/"><img
-                                    src="Icons/linkedin (1).svg" style="height: 1.4rem;"></a>
-                            <a class="btnSS" href="https://x.com/czy_sam_7897"><img src="Icons/twitter.svg"
-                                    style="height: 1.4rem;"></a>
-                            <a class="btnSS"
-                                href="https://www.instagram.com/haridashi_00?igsh=MWRrcGhsazA4NXFvYQ=="><img
-                                    src="Icons/instagram.svg" style="height: 1.4rem;"></a>
+                    <div class="tabs">
+                        <div class="tab-header">
+                            <button class="tab-btn active" data-tab="skills">Skills</button>
+                            <button class="tab-btn" data-tab="education">Education</button>
+                            <button class="tab-btn" data-tab="experience">Experience</button>
                         </div>
 
-                        <!-- <div>
-                  <a href="C:\Users\Lenovo\Downloads\shivam yadav.pdf" download="Your_CV.pdf" class="btn btn2" style="font-size: .8rem; text-align: center; padding: 10px;">Download CV</a>
-                </div> -->
-                    </div>
-                    <div class="contact-right">
-                        <h1 class="sub-title" style="text-align: start;"><b>Quick Links</b></h1> 
-                        </h1>
-                        <ul style="text-align: start;">
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about">About</a></li> 
-                            <li><a href="https://yshivam7897.github.io/MyPortfolio/blog.html">Blog</a></li>
-                            <li><a href="#services-id">Services</a></li>
-                            <li><a href="#getInTouch">Contact</a></li>
-                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="skills">
+                                <div class="skill">
+                                    <h3>UI/UX:</h3>
+                                    <p>Developing web/app interfaces</p>
+                                </div>
+                                <div class="skill">
+                                    <h3>Automation & Manual Testing:</h3>
+                                    <p>Testing web apps using Selenium python, java</p>
+                                </div>
+                                <div class="skill">
+                                    <h3>Android Apps Testing:</h3>
+                                    <p>Testing Android apps using Appium katalon java</p>
+                                </div>
+                                <div class="skill">
+                                    <h3>Web Development:</h3>
+                                    <p>HTML, CSS, JavaScript</p>
+                                </div>
+                            </div>
 
-                        
-                      <h1 class="space" style="height: 13rem;"><b> </b></h1>
-                </div>
+                            <div class="tab-pane" id="education">
+                                <div class="timeline-item">
+                                        <h3>Matrix & Intermediate</h3>
+                                        <p class="timeline-meta">Ram Janam Inter College, 2019-2023</p>
+                                        <p>Completed with distinction in PCM.</p>    
+                                </div>
+                                <div class="timeline-item">
+                                    <h3>Bachelor of Computer Applications (BCA)</h3>
+                                    <p class="timeline-meta">Galgotias University, 2023-2026</p>
+                                    <p>Focused on software development, testing methodologies, and mobile application
+                                        development.</p>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="experience">
+                                <div class="timeline-item">
+                                    <h3>QA Tester Intern</h3>
+                                    <p class="timeline-meta">Selenium, Katalon Technologies, 2022-2023</p>
+                                    <p>Conducted manual and automated testing for web and mobile applications. Worked
+                                        with Selenium and Appium to create test scripts.</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <h3>Android app Developer</h3>
+                                    <p class="timeline-meta">Freelance, 2021-Present</p>
+                                    <p>Developed responsive Android app for small businesses and startups. Implemented
+                                        modern UI/UX designs.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="copyright">
-            <p class="copyright-text" style="color: aliceblue;">All copyright reserved by Shivam's Portfolio!</p>
+    <!-- Quick Links Section -->
+    <section class="quick-links">
+        <div class="container">
+            <h2 class="section-title text-center">Quick Links</h2>
+            <div class="links-grid">
+                <a href="https://drive.google.com/file/d/12LKvxdabJYtALo4uh7ncL_7LRGAR5af8/view?usp=drive_link" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="link-info">
+                        <h3>Resume</h3>
+                        <p>Download my latest resume</p>
+                    </div>
+                </a>
+                <a href="#" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="link-info">
+                        <h3>Portfolio</h3>
+                        <p>View my project portfolio</p>
+                    </div>
+                </a>
+                <a href="https://yshivam7897.github.io/MyPortfolio/blog.html" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="link-info">
+                        <h3>Blog</h3>
+                        <p>Read my latest articles</p>
+                    </div>
+                </a>
+                <a href="https://github.com/YSHIVAM7897" class="link-card">
+                    <div class="link-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="link-info">
+                        <h3>GitHub</h3>
+                        <p>Check out my code repositories</p>
+                    </div>
+                </a>
+            </div>
         </div>
+    </section>
 
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title text-center">Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Creating responsive and user-friendly websites using modern technologies.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Responsive Design</li>
+                        <li><i class="fas fa-check"></i> Modern Frameworks</li>
+                        <li><i class="fas fa-check"></i> SEO Optimization</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Android Development</h3>
+                    <p>Building native Android applications with Java and modern frameworks.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Native Apps</li>
+                        <li><i class="fas fa-check"></i> Material Design</li>
+                        <li><i class="fas fa-check"></i> Performance Optimization</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Testing Services</h3>
+                    <p>Comprehensive testing solutions including automation and manual testing.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Selenium Testing</li>
+                        <li><i class="fas fa-check"></i> Appium Testing</li>
+                        <li><i class="fas fa-check"></i> Test Automation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title text-center">Contact Me</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>Feel free to reach out to me for any inquiries or collaboration opportunities.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <p class="contact-label">Email</p>
+                                <a href="mailto:yadavshivam6925@gmail.com" style="text-decoration: none;">
+                                    <span>yadavshivam6925@gmail.com</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <p class="contact-label">Phone</p>
+                                <a href="tel:+917897063398" style="text-decoration: none;">
+                                    <span>+91 7897063398</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <p class="contact-label">Location</p>
+                                <span>Greater Noida, India</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h4>Follow Me</h4>
+                        <div class="social-icons">
+                            <a href="https://github.com/YSHIVAM7897" class="social-icon"><i
+                                    class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/shivamyadav7897/" class="social-icon"><i
+                                    class="fab fa-linkedin"></i></a>
+                            <a href="https://x.com/czy_sam_7897" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/haridashi_00?igsh=MWRrcGhsazA4NXFvYQ=="
+                                class="social-icon"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="availability">
+                        <h4>Availability</h4>
+                        <div class="availability-status">
+                            <span class="status-indicator available"></span>
+                            <span>Available for freelance projects</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Shivam Yadav</h3>
+                    <p>Web & Android Developer</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/YSHIVAM7897"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/shivamyadav7897/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://x.com/czy_sam_7897"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; <span id="currentYear"></span> Shivam Yadav. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
-</body> 
-<script>
-    var tablinks = document.getElementsByClassName("tab-link");
-    var tabcontents = document.getElementsByClassName("tab-contains");
-
-    function opentab(tabname) {
-        // Remove active class from all tab links
-        for (var tablink of tablinks) {
-            tablink.classList.remove("active-link");
-        }
-
-        // Hide all tab contents
-        for (var tabcontent of tabcontents) {
-            tabcontent.classList.remove("active-tab");
-        }
-
-        // Add active class to the clicked tab link
-        event.currentTarget.classList.add("active-link");
-
-        // Show the clicked tab content
-        document.getElementById(tabname).classList.add("active-tab");
-    }
-</script>
+    <script src="script.js"></script>
+</body>
 
 </html>

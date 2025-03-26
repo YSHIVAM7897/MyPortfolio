@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Shivam's Portfolio</title>
+  <link rel="stylesheet" href="portfolio_style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div id="adminLoginSection" class="admin-login">
+    <div class="login-card">
+      <div class="login-header">
+        <h1>Admin Login</h1>
+        <p>Please login to access the admin dashboard</p>
+      </div>
+      <form id="loginForm" class="login-form">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+      </form>
+      <div style="text-align: center; margin-top: 1rem;">
+        <a href="index.html" class="post-link">Return to Homepage</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="adminDashboardSection" style="display: none;">
+    <!-- Header -->
+    <header class="header">
+      <h1 class="logo">Shivam's Portfolio</h1>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="admin.html">Admin</a></li>
+        </ul>
+      </nav>
+      <button id="logoutBtn" class="btn btn-outline" style="color: #f5222d;">Logout</button>
+    </header>
+
+    <!-- Admin Dashboard -->
+    <div class="admin-dashboard">
+      <div class="container">
+        <div class="dashboard-header">
+          <h1 class="section-title">Blog Admin Dashboard</h1>
+          <button id="createBlogBtn" class="btn btn-primary">
+            <i class="fas fa-plus"></i> Create New Blog
+          </button>
+        </div>
+
+        <div class="admin-tabs">
+          <button class="admin-tab-btn active" data-tab="all">All Blogs</button>
+          <button class="admin-tab-btn" data-tab="published">Published</button>
+          <button class="admin-tab-btn" data-tab="drafts">Drafts</button>
+        </div>
+
+        <div class="admin-tab-content">
+          <div class="admin-tab-pane active" id="all">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Category</th>
+                  <th>Date</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="blogTableBody">
+                <!-- Blog entries will be loaded here via JavaScript -->
+              </tbody>
+            </table>
+          </div>
+          <div class="admin-tab-pane" id="published">
+            <div style="padding: 2rem; text-align: center;">
+              <p>Published blogs will appear here.</p>
+            </div>
+          </div>
+          <div class="admin-tab-pane" id="drafts">
+            <div style="padding: 2rem; text-align: center;">
+              <p>Draft blogs will appear here.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Create/Edit Blog Modal -->
+  <div id="blogModal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" id="closeModal">&times;</button>
+      <div class="modal-header">
+        <h2 id="modalTitle">Create New Blog Post</h2>
+        <p>Fill in the details for your new blog post. Click save when you're done.</p>
+      </div>
+      <form id="blogForm">
+        <input type="hidden" id="blogId">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" required>
+          </div>
+          <div class="form-group">
+            <label for="category">Category</label>
+            <select id="category" name="category" required>
+              <option value="Web Development">Web Development</option>
+              <option value="Android">Android</option>
+              <option value="Testing">Testing</option>
+              <option value="UI/UX">UI/UX</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="summary">Summary</label>
+          <input type="text" id="summary" name="summary" required>
+        </div>
+        <div class="form-group">
+          <label for="image">Featured Image</label>
+          <input type="file" id="image" name="image" accept="image/*">
+          <div id="imagePreview" class="image-preview" style="display: none;">
+            <img id="previewImg" src="/placeholder.svg" alt="Preview">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="content">Content</label>
+          <textarea id="content" name="content" rows="15" required></textarea>
+          <p class="form-help">
+            You can use HTML tags for formatting. For example, &lt;h2&gt;Heading&lt;/h2&gt; for headings, &lt;p&gt;Paragraph&lt;/p&gt; for paragraphs, etc.
+          </p>
+        </div>
+        <button type="submit" class="btn btn-primary">Save Blog</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="blogCard.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+

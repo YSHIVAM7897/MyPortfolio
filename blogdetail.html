@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Detail - Shivam's Portfolio</title>
+  <link rel="stylesheet" href="portfolio_style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h1 class="logo">Shivam's Portfolio</h1>
+    <nav class="nav">
+      <ul>
+        <li><a href="https://yshivam7897.github.io/MyPortfolio/portfolio.html">Home</a></li>
+        <li><a href="https://yshivam7897.github.io/MyPortfolio/blog.html">Blogs</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" id="menuToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <!-- Blog Hero -->
+  <div class="blog-hero">
+    <img src="" alt="" class="blog-hero-image" id="blogImage">
+    <div class="blog-hero-overlay">
+      <div>
+        <span class="blog-hero-category" id="blogCategory"></span>
+        <h1 class="blog-hero-title" id="blogTitle"></h1>
+        <div class="featured-meta">
+          <div class="author-image">
+            <img src="Icons/profileUser.jpg" alt="Author">
+          </div>
+          <div class="meta-info">
+            <p class="author-name" id="blogAuthor"></p>
+            <p class="post-date" id="blogDate"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blog Content -->
+  <article class="blog-content">
+    <div>
+      <a href="blogs.html" class="btn btn-outline">
+        <i class="fas fa-arrow-left"></i> Back to Blogs
+      </a>
+    </div>
+    
+    <div class="blog-content-body" id="blogContent">
+      <!-- Blog content will be loaded here via JavaScript -->
+    </div>
+    
+    <div class="blog-share">
+      <h3>Share this article</h3>
+      <div class="share-buttons">
+        <a href="#" class="share-button share-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="share-button share-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="share-button share-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <!-- Related Posts -->
+  <section class="related-posts">
+    <div class="container">
+      <h2 class="section-title text-center">Related Articles</h2>
+      <div class="related-grid" id="relatedPosts">
+        <!-- Related posts will be loaded here via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>Shivam Yadav</h3>
+          <p>Web & Android Developer</p>
+        </div>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; <span id="currentYear"></span> Shivam Yadav. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="blogCard.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
