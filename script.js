@@ -67,16 +67,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   
     // Blog page functionality
-    if (window.location.pathname.includes("blogs.html")) {
+    if (window.location.pathname.includes("blog.html")) {
       loadBlogPosts()
     }
   
     // Blog detail page functionality
-    if (window.location.pathname.includes("blog-detail.html")) {
+    if (window.location.pathname.includes("blogdetail.html")) {
       const urlParams = new URLSearchParams(window.location.search)
       const blogId = urlParams.get("id")
   
-      if (blogId) {
+      if (true) {
         loadBlogDetail(blogId)
       } else {
         window.location.href = "blogs.html"
@@ -145,44 +145,114 @@ document.addEventListener("DOMContentLoaded", () => {
       const sampleBlogs = [
         {
           id: "1",
-          title: "Getting Started with Web Development",
-          summary: "A beginner's guide to web development tools and technologies.",
+          title: "Hosting a Web Page on GitHub Using GitHub Actions Workflow",
+          summary: "If you’ve built a personal portfolio, project documentation, or just a fun HTML site and want to host it online for free, GitHub Pages is a fantastic option. But did you know you can automate your deployment using GitHub Actions Workflows? In this blog, we'll walk through how to set that up step-by-step.",
           content: `
-            <p>Web development is an exciting field that combines creativity with technical skills. In this blog post, we'll explore the essential tools and technologies that every beginner should know about.</p>
+            <p>GitHub isn’t just for version control and code collaboration—it’s also a powerful and free platform to host websites. Whether you're building a personal blog, showcasing a portfolio, or highlighting a project, GitHub Pages provides an easy way to publish static sites straight from your repository.</p>
             
-            <h2>Getting Started with HTML</h2>
-            <p>HTML (HyperText Markup Language) is the standard markup language for documents designed to be displayed in a web browser. It defines the structure of web content.</p>
-            
-            <p>Here's a simple HTML example:</p>
-            <pre><code>&lt;!DOCTYPE html&gt;
-  &lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;My First Web Page&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Hello, World!&lt;/h1&gt;
-    &lt;p&gt;This is my first web page.&lt;/p&gt;
-  &lt;/body&gt;
-  &lt;/html&gt;</code></pre>
-            
-            <h2>Styling with CSS</h2>
-            <p>CSS (Cascading Style Sheets) is used to style and layout web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features.</p>
-            
-            <h2>Making it Interactive with JavaScript</h2>
-            <p>JavaScript is a programming language that allows you to implement complex features on web pages. Every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved.</p>
-          `,
-          date: "2023-05-15",
+            <h2>Step 1: Create a GitHub account</h2>
+            <ul>
+              <li>The first step is to create a <a href="https://github.com/">GitHub </a> account if you don’t have one already. You can create an account for free on the GitHub website.</li>
+              <li>If you already have one then do github login to your account.</li>
+            </ul>
+
+            <h2>Step 2: Create a new repository</h2>
+            <ul>
+              <li>Click on the "+" icon in the top right corner of the GitHub page.</li>
+              <li>Select "New repository".</li>
+              <li>Give your repository a name (e.g., "my-website").</li>
+              <li>Choose "Public" for visibility.</li>
+              <li>Check the box for "Initialize this repository with a README".</li>
+              <li>Click "Create repository".</li>
+            </ul>
+
+            <h2>Step 3: Create a simple HTML file</h2>
+            <p>In your new repository, create an HTML file. You can do this directly on GitHub or clone the repository to your local machine and edit it there.</p>
+             
+            <h2>Step 4: Goto the "Settings" tab</h2>
+             <ul>
+              <li>Click on the "Settings" tab in your repository.</li>
+              <li>Scroll down to the "GitHub Pages" section.</li>  
+              <li>Select the "main" branch as the source.</li>
+              <li>Click "Save".</li>
+            </ul>
+
+            <p>After a few minutes, your site will be live at <code>https://yourusername.github.io/your-repository-name</code>.</p>
+            <p>For example, if your GitHub username is "john" and your repository name is "my-website", your site will be available at <code>https://john.github.io/my-website</code>.</p>
+
+
+            <h2>Step 5: Automate Deployment with GitHub Actions</h2>
+            <p>Now that your site is live, you can automate the deployment process using GitHub Actions. This allows you to automatically deploy changes whenever you push to the main branch.</p>
+            <p>To set up GitHub Actions:</p>
+            <ul>
+              <li>In your repository, click on the "Actions" tab.</li>  
+              <li>Click on "Set up a workflow yourself".</li>
+              <li>Replace the default YAML code with the following:</li>
+              <pre>
+                <code># Simple workflow for deploying static content to GitHub Pages
+name: Deploy static content to Pages
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: github-pages
+      url: "{{ steps.deployment.outputs.page_url }}"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload entire repository
+          path: '.'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+                </code>
+              </pre>
+              
+            <ul>
+              <li>Commit the changes.</li>
+              <li>Now, every time you push changes to the main branch, GitHub Actions will automatically deploy your site.</li>
+            </ul>`,
+          date: "Dec 15, 2025",
           author: "Shivam Yadav",
-          category: "Web Development",
+          category: "Technologies",
           image: "https://via.placeholder.com/600x400?text=Web+Development",
         },
         {
           id: "2",
           title: "Mastering Android Development",
           summary: "Tips and tricks for becoming a proficient Android developer.",
-          content:
-            "Android development offers a vast ecosystem for creating mobile applications. This post covers advanced techniques and best practices for building robust Android apps.",
-          date: "2023-06-22",
+          content:`
+          <p>Android development offers a vast ecosystem for creating mobile applications. This post covers advanced techniques and best practices for building robust Android apps."</p>
+          <h4>Comming Soon</h4>`,
+          date: "April 20, 2025",
           author: "Shivam Yadav",
           category: "Android",
           image: "https://via.placeholder.com/600x400?text=Android+Development",
@@ -199,7 +269,10 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderBlogPosts(blogs) {
     const blogPosts = document.getElementById("blogPosts")
   
-    if (!blogPosts) return
+    if (!blogPosts){
+      console.error("Blog posts container not found.")
+      return
+    }
   
     blogPosts.innerHTML = ""
   
@@ -218,7 +291,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
           <h3 class="post-title">${blog.title}</h3>
           <p class="post-excerpt">${blog.summary}</p>
-          <a href="blog-detail.html?id=${blog.id}" class="post-link">Read More <i class="fas fa-arrow-right"></i></a>
+          <a href="blogdetail.html?id=${blog.id}" class="post-link">Read More <i class="fas fa-arrow-right"></i></a>
         </div>
       `
   
@@ -230,7 +303,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const blog = getBlogById(blogId)
   
     if (!blog) {
-      window.location.href = "blogs.html"
+      window.location.href = "blogdetail.html"
       return
     }
   
@@ -258,7 +331,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     related.forEach((blog) => {
       const relatedCard = document.createElement("a")
-      relatedCard.href = `blog-detail.html?id=${blog.id}`
+      relatedCard.href = `blogdetail.html?id=${blog.id}`
       relatedCard.className = "related-card"
   
       relatedCard.innerHTML = `

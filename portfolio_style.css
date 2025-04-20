@@ -619,7 +619,7 @@ img {
   padding: 4rem 0;
 }
 
-.featured-card {
+.featured-card { 
   background-color: var(--white);
   border-radius: var(--border-radius);
   overflow: hidden;
